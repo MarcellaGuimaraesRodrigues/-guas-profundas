@@ -1,0 +1,206 @@
+@import url(//fonts.googleapis.com/css?family=Lato:300:400);
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: "Roboto Condensed", sans-serif;
+  
+}
+
+body {
+  
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: "Roboto Condensed", sans-serif;
+  
+}
+
+p {
+    font-family: "Roboto Condensed", sans-serif;
+    letter-spacing: 1px;
+    font-size: 14px;
+   
+}
+
+.cb {
+    position: relative;
+    text-align: center;
+    background-color: #e6e7e0;
+    color: white;
+}
+
+.logo {
+    width: 50px;
+    fill: white;
+    padding-right: 15px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.inner-cb {
+    height: 65vh;
+    width: 100%;
+    margin: 0;
+    padding: 400px;
+    background-color: #97dce4;
+    background-image: linear-gradient(0deg, #e6e7e0 0%, #97dce4 100%);
+}
+
+h1{
+  text-align: center;
+  color: #2c2c54;
+  font-size: 80px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: bold;
+
+}
+
+.waves {
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    margin-bottom: -7px;
+    min-height:100px;
+    max-height: 150px;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.ocean-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap:10vh;
+  padding: 20px;
+  background-color: #538d99;
+  background-image: linear-gradient(180deg, #69c0d1 0%, #1d5c8b 19%,  #051b2b 60%, #000407 80%, #000000 100%);
+  min-height: 100vh; 
+  
+}
+
+.side-div {
+  width: 400px; 
+  background-image: linear-gradient(180deg, #69c0d1 0%, #1d5c8b 19%, #051b2b 60%, #000407 80%, #000000 100%);
+  margin: 0;
+}
+
+.depth {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(0, 47, 77, 0.3);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;
+  
+ 
+}
+
+.depth img {
+  width: 60%;
+  max-width: 300px;
+  border-radius: 10px;
+  margin-top: 20px;
+  transition: transform 0.3s ease;
+}
+
+
+.depth img.manette{
+  width: 100%;
+  max-width: 300px;
+}
+
+.depth img.palhaço{
+  width: 100%;
+  max-width: 100px;
+}
+
+.depth img.polar{
+  width: 100%;
+  max-width: 300px;
+}
+
+.depth img.azul{
+  width: 100%;
+  max-width: 100px;
+}
+
+.depth img.caranguejo{
+  width: 100%;
+  max-width: 100px;
+}
+
+.depth img.coral{
+  width: 100%;
+  max-width: 140px;
+}
+
+.depth:hover img {
+  transform: scale(1.05);
+}
+
+
+.depth:nth-child(1) { background-color: #005f73; }
+.depth:nth-child(2) { background-color: #0a9396; }
+.depth:nth-child(3) { background-color: #005f73; }
+.depth:nth-child(4) { background-color: #001f3f; }
+
+
+.depth.show {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 20px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0);
+  transition: opacity 1s ease, transform 1s ease;
+  opacity: 1;
+  transform: translateY(0);
+  width:100%;
+}
+
+
+
+.parallax > use {
+    animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+
+.parallax > use {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
+
+
+@media (max-width: 768px) {
+    .waves {
+        height: 40px;
+        min-height: 40px;
+    }
+
+    .ocean-container{
+        height: 30vh;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}

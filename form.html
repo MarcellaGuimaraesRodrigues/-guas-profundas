@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Contato</title>
+  <link rel="stylesheet" href="form.css">
+  <link rel="stylesheet" href="bolhas.css">
+  <link rel="stylesheet" href="header.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Prata&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Slabo+27px&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+        <img src="img/logo.png" alt="Logo" class="logo-image"> 
+    </div>
+    <nav class="center-info">
+        <a href="index.html" class="nav-link" data-name="Home">Início</a>
+        <a href="#explore" class="nav-link ">Em breve</a>
+        <a href="sobre.html" class="nav-link" data-name="About">Sobre</a>
+    </nav>
+
+    <div class="auth-buttons">
+        <a href="form.html" class="sign-in">Sign In</a>
+
+    </div>
+</header>
+
+
+    <div class="form-container animate-form">
+        <h2>Entre em Contato</h2>
+        <form id="contactForm">
+          <div class="form-group">
+            <label for="name">Nome</label>
+            <input type="text" id="name" name="name" placeholder="Seu nome completo">
+            <span class="error-message" id="nameError"></span>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com">
+            <span class="error-message" id="emailError"></span>
+          </div>
+          
+          <div class="custom-dropdown">
+            <label for="cityDropdown" class="dropdown-label">Selecione sua cidade:</label>
+            <div class="dropdown-wrapper">
+              <button class="dropdown-toggle" id="dropdownToggle">
+                <span>Escolha uma cidade</span>
+                <span class="dropdown-arrow">▼</span>
+              </button>
+              <ul class="dropdown-menu" id="dropdownMenu">
+                <li class="dropdown-item" data-value="sp">São Paulo</li>
+                <li class="dropdown-item" data-value="rj">Rio de Janeiro</li>
+                <li class="dropdown-item" data-value="bh">Belo Horizonte</li>
+                <li class="dropdown-item" data-value="poa">Porto Alegre</li>
+                <li class="dropdown-item" data-value="ctba">Curitiba</li>
+              </ul>
+              <input type="hidden" name="city" id="selectedCity" value="">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Mensagem</label>
+            <textarea id="message" name="message" rows="5" placeholder="Escreva sua mensagem"></textarea>
+            <span class="error-message" id="messageError"></span>
+          </div>
+
+          <div class="custom-radio-group">
+            <label class="custom-radio">
+              <input type="radio" name="opcao" value="Desenvolvimento">
+              <span class="radio-label">Desenvolvimento</span>
+            </label>
+            <label class="custom-radio">
+              <input type="radio" name="opcao" value="Segurança">
+              <span class="radio-label">Segurança</span>
+            </label>
+          </div>
+          
+          <button class="enviar" type="submit">Enviar</button>
+        </form>
+        
+    </div>
+      <div class="bubble bubble1"></div>
+      <div class="bubble bubble2"></div>
+      <div class="bubble bubble3"></div>
+      <div class="bubble bubble4"></div>
+      <div class="bubble bubble5"></div>
+      <div class="bubble bubble6"></div>
+
+<script src="form.js"></script>
+
+</body>
+</html>
